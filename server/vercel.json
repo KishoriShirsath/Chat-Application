@@ -11,22 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "env": {
-    "GRAPHQL_ENDPOINT": "/api/graphql"
-  },
-  "dev": {
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server.js"
-      }
-    ]
-  },
-  "functions": {
-    "api/graphql": {
-      "handler": "index.handler",
-      "memory": 1024
-    }
-  }
+  ]
 }
