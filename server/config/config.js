@@ -8,5 +8,11 @@ module.exports = {
   database: process.env.DB_DATABASE,
   host: process.env.DB_HOST,
   dialect: process.env.DB_DIALECT,
-  logging: false,
+  logging: true,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // You can set this to false if needed
+    },
+  },
 };
