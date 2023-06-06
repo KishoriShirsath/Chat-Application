@@ -7,20 +7,34 @@ const basename = path.basename(__filename);
 const config = require(__dirname + "/../config/config.js");
 const db = {};
 
-console.log(
-  " config.database",
-  config.database,
-  config.username,
-  config.password,
-  config
-);
+// console.log(
+//   " config.database",
+//   ,
+//   config.username,
+//   config.password,
+//   config
+// );
+
+// const sequelize = new Sequelize(
+//   config.database,
+//  config.username ,
+//   config.password,
+//   config,
+
+// );
 
 const sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
-  config
+  {
+    host: config.host,
+    dialect: "mysql",
+    dialectModule: require("mysql2"),
+  }
 );
+
+console.log("sequelize", sequelize);
 
 fs.readdirSync(__dirname)
 
