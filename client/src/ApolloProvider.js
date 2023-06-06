@@ -13,7 +13,8 @@ import { getMainDefinition } from "@apollo/client/utilities";
 // createHttpLink is a function  used to create an Apollo Link instance for making HTTP requests.
 // The uri option is used to specify the URL endpoint for the GraphQL server you want to connect to.
 let httpLink = createHttpLink({
-  uri: "http://localhost:4000",
+  // uri: "http://localhost:4000",
+  uri: "https://chat-application-server-git-master-kishorishirsath.vercel.app/",
 });
 
 // Apollo Client, setContext is a function that allows you to modify the context of an Apollo Link instance.
