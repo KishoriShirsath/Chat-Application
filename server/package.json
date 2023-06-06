@@ -9,6 +9,7 @@
     "dotenv": "^8.2.0",
     "graphql": "^15.3.0",
     "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.3.3",
     "pg": "^8.7.1",
     "sequelize": "^6.30.0"
   },
