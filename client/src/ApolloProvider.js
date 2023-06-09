@@ -41,7 +41,7 @@ console.log("host", host);
 // as it enables bi - directional communication between the client and the server.
 const wsLink = new WebSocketLink({
   // uri: `ws://localhost:4000/`,
-  uri: "https://chat-application-server-git-master-kishorishirsath.vercel.app/",
+  uri: "wss://chat-application-server-git-master-kishorishirsath.vercel.app/",
   options: {
     reconnect: true,
     connectionParams: {
