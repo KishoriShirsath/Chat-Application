@@ -13,8 +13,9 @@ import { getMainDefinition } from "@apollo/client/utilities";
 // createHttpLink is a function  used to create an Apollo Link instance for making HTTP requests.
 // The uri option is used to specify the URL endpoint for the GraphQL server you want to connect to.
 let httpLink = createHttpLink({
-  // uri: "http://localhost:4000",
-  uri: "https://chat-application-server-git-master-kishorishirsath.vercel.app/",
+  // uri: "http://localhost:4000",  //Localhost URI
+  //uri: "https://chat-application-server-git-master-kishorishirsath.vercel.app/",  //Vercel deployment URI
+  uri: "/graphql/", //AWS deployment URI
 });
 
 // Apollo Client, setContext is a function that allows you to modify the context of an Apollo Link instance.
@@ -40,8 +41,9 @@ console.log("host", host);
 // This is particularly useful when working with real - time data through GraphQL subscriptions,
 // as it enables bi - directional communication between the client and the server.
 const wsLink = new WebSocketLink({
-  // uri: `ws://localhost:4000/`,
-  uri: "wss://chat-application-server-git-master-kishorishirsath.vercel.app/",
+  // uri: `ws://localhost:4000/`, //Localhost URI
+  // uri: "wss://chat-application-server-git-master-kishorishirsath.vercel.app/", //Vercel deployment URI
+  uri: `ws://${host}/graphql/`, //AWS deployment URI
   options: {
     reconnect: true,
     connectionParams: {
